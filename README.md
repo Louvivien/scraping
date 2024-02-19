@@ -1,6 +1,6 @@
 
 
-## Scrapping
+## Scraping
 
 
-Here are scrapping attempts for Google map (phone number, url), Pages jaunes (Phone number) and Géorisques (details data)
+Here are scraping attempts for Google map (phone number, url), Pages jaunes (Phone number) and Géorisques (details data)

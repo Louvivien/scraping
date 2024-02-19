@@ -1,7 +1,7 @@
 
 
 
-## Gmap scrapping
+## Gmap scraping
 
 [scrapeurltextmatch.py](scrapeurltextmatch.py) gets the google map url for a company and its adress and check that the title match with the company name
 
