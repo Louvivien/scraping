@@ -1,19 +1,34 @@
-import streamlit as st
+from dotenv import load_dotenv
+import os
 import requests
 from bs4 import BeautifulSoup
 import re
 import json
-from dotenv import load_dotenv
-import os
+import streamlit as st
 
 # Load environment variables
 load_dotenv()
 
+# Construct headers from environment variables
+headers = {
+    "Accept": os.getenv("ACCEPT"),
+    "Accept-Language": os.getenv("ACCEPT_LANGUAGE"),
+    "Connection": os.getenv("CONNECTION"),
+    "Cookie": os.getenv("COOKIE"),
+    "Referer": os.getenv("REFERER"),
+    "Sec-Fetch-Dest": os.getenv("SEC_FETCH_DEST"),
+    "Sec-Fetch-Mode": os.getenv("SEC_FETCH_MODE"),
+    "Sec-Fetch-Site": os.getenv("SEC_FETCH_SITE"),
+    "User-Agent": os.getenv("USER_AGENT"),
+    "X-Requested-With": os.getenv("X_REQUESTED_WITH"),
+    "sec-ch-ua": os.getenv("SEC_CH_UA"),
+    "sec-ch-ua-mobile": os.getenv("SEC_CH_UA_MOBILE"),
+    "sec-ch-ua-platform": os.getenv("SEC_CH_UA_PLATFORM"),
+}
+
 # Function to fetch and parse data
 def fetch_data():
     url = os.getenv('URL')
-    headers = json.loads(os.getenv('HEADERS'))
-
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -29,7 +44,7 @@ def fetch_data():
 
 # Streamlit app
 def main():
-    st.title('TOURTEAU COLZA EXPELLER FROID - ROYBON (38)')
+    st.title('My Data Viewer')
 
     data = fetch_data()
 
