@@ -104,6 +104,19 @@ def main():
             ("ROUEN (76)", 'URL39'), 
             ("SETE (34)", 'URL40')
         ],
+        "DRECHES DE BLE (339)": [
+            ("BAZANCOURT (51)", 'URL41'), 
+            ("ORIGNY-STE-BENOITE (02)", 'URL42'), 
+            ("ZEITZ", 'URL43')
+        ],
+        "TOURTEAU CANOLA (240)": [
+            ("ROUEN (76)", 'URL44')
+        ],
+        "TOURTEAU TOURNESOL 28 (221)": [
+            ("DEINZE", 'URL45'), 
+            ("REUS", 'URL46'), 
+            ("ST-NAZAIRE (44)", 'URL47')
+        ],
     }
 
 
